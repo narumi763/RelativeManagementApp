@@ -1,2 +1,1 @@
-# RelativeManagementApp
-# 親戚管理
+# RelativeManagementApp(親戚管理)
