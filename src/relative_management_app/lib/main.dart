@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:relative_management_app/edit_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const MyHomePage(title: '顔写真管理'),
     );
   }
 }
@@ -43,23 +44,14 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headline4,
-            ),
-          ],
-        ),
-      ),
       floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
+        onPressed:() {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context)=> EditPage()),
+          );
+        },
+        tooltip: '追加',
         child: const Icon(Icons.add),
       ),
     );
